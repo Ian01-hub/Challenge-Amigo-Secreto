@@ -7,6 +7,17 @@ let listaAmigos = [];
 function agregarAmigo() {
 let nombreAmigos = (document.getElementById('amigo').value);
 
-listaAmigos.push(nombreAmigos);
-console.log (listaAmigos);
+if(nombreAmigos == ""){
+    alert("Por favor inserte un nombre valido");
+}else{
+    listaAmigos.push(nombreAmigos);
+    console.log (listaAmigos);
+    limpiarCaja();
+}
+
+}
+
+function limpiarCaja (){
+
+     document.querySelector('#amigo').value = ''; 
 }
