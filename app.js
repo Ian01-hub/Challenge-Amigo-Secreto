@@ -26,18 +26,45 @@ function mostrarAmigos (){
 let lista = document.getElementById('listaAmigos');
 
  lista.innerHTML = "";
-// Recorre el array y agrega cada nombre como un elemento k<li>
+// Recorre el array y agrega cada nombre como un elemento <li>
     amigos.forEach(amigo => {
         let nuevoElementoLista = document.createElement("li");
         nuevoElementoLista.textContent = amigo;
         lista.appendChild(nuevoElementoLista);
+        console.log(nuevoElementoLista);
     })
   return;
 
 }
 
+//sacamos un número aleatorio y mostramos el amigo que corresponde a ese número
+function sortearAmigo(){
+    validarNumeroAmigos();
+     let sorteo = Math.floor(Math.random()*amigos.length);
+
+   console.log(sorteo);
+
+    let amigoSecreto = amigos[sorteo];
+ 
+    let sorteado = document.getElementById('resultado');
+
+     sorteado.innerHTML = `El amigo secreto es ${amigoSecreto}`;
+    
+return;
+}
 
 
+// funcion para verificar si hay amigos en la lista y si hay mas de dos
+function validarNumeroAmigos(){
+    if (amigos == "" || amigos.length <= 2){
+        alert("Agregue mas amigos para poder realizar el sorteo");
+    }
+    return;
+
+}
+
+
+//limpiamos caja
 function limpiarCaja (){
 
      document.querySelector('#amigo').value = ''; 
