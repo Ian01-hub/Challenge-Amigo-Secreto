@@ -9,6 +9,9 @@ let nombreAmigos = (document.getElementById('amigo').value);
 
 if(!nombreAmigos || nombreAmigos.trim().length === 0){
     alert("Por favor inserte un nombre valido");
+}else if(amigos.includes(nombreAmigos)){
+  alert("Ese nombre ya esta en la lista, por favor inserte otro.")
+  limpiarCaja();
 }else{
     amigos.push(nombreAmigos);
     console.log (amigos);
