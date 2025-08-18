@@ -35,14 +35,15 @@ let lista = document.getElementById('listaAmigos');
         nuevoElementoLista.textContent = amigo;
         lista.appendChild(nuevoElementoLista);
         console.log(nuevoElementoLista);
-    })
-  return;
+    });
+  
 
 }
 
 //sacamos un número aleatorio y mostramos el amigo que corresponde a ese número
 function sortearAmigo(){
-    validarNumeroAmigos();
+
+   if (!validarNumeroAmigos()){
      let sorteo = Math.floor(Math.random()*amigos.length);
 
    console.log(sorteo);
@@ -52,18 +53,19 @@ function sortearAmigo(){
     let sorteado = document.getElementById('resultado');
 
      sorteado.innerHTML = `El amigo secreto es ${amigoSecreto}`;
-    
-return;
+}
+return; 
+ 
 }
 
 
 // funcion para verificar si hay amigos en la lista y si hay mas de dos
 function validarNumeroAmigos(){
-    if (amigos == "" || amigos.length <= 2){
+    if ( amigos.length <= 2){
         alert("Agregue mas amigos para poder realizar el sorteo");
+    
+    return true;
     }
-    return;
-
 }
 
 
