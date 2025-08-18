@@ -53,7 +53,9 @@ function sortearAmigo(){
     let sorteado = document.getElementById('resultado');
 
      sorteado.innerHTML = `El amigo secreto es ${amigoSecreto}`;
+   
 }
+
 return; 
  
 }
@@ -68,6 +70,13 @@ function validarNumeroAmigos(){
     }
 }
 
+//se podrá usar despues
+/*function resetearLista() {
+    amigos = []; // Vaciar el array de amigos
+    mostrarAmigos(); // Limpiar la lista
+    limpiarCaja(); // Limpiar el campo de entrada
+}
+*/
 
 //limpiamos caja
 function limpiarCaja (){
