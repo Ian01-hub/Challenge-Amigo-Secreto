@@ -40,6 +40,8 @@ Amigo Secreto es una aplicación web que permite gestionar una lista de amigos y
      
 4. **Realizar sorteo cuantas veces quieras**:
    - Puedes seguir haciendo sorteos usando los nombres de esa misma lista tantas veces quieras y agregar nombres nuevos en cualquier momento. En caso de querer crear una lista nueva solo hay que recargar la pagina.
-
+## Autores
+-|https://github.com/Ian01-hub|
+- Cualquier duda o sugerencia, conactar al correo: ian.perez.alegria@hotmail.com
 ## Mas mejoras proximamente... 🚧
 
